@@ -21,4 +21,10 @@ rate-limiter-go/
 - The project using golang version 1.21
 - All ENVs it's possibly modify in file `.env`
 - You can request the address in URL: `http://localhost:8080`
-- 
+- The limits default is 5 request per second to IP
+- I configured Redis, because I want persist the access data
+
+
+> [!Note]
+> When the limit is exceeded, the server return a 429 HTTP code with the message "You have rached the Maximum number of requests or actions allowed Within a certain time frame"
+
